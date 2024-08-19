@@ -330,3 +330,64 @@ BEGIN
 	SELECT 'Aplicacion creada correctamente' AS mensaje;
 END$$
 DELIMITER ;
+
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `enviarNotificacionSolicitante`(
+    IN ID_ESTADO_SOLICITUD_P INT,
+    IN ID_SOLICITUD_P INT
+)
+BEGIN 
+	DECLARE oferTitulo VARCHAR(255);
+	DECLARE idPersona INT;
+    DECLARE nombreEmpresa VARCHAR(255);
+    
+    SELECT id_solicitante into idPersona 
+    FROM solicitudes WHERE id_solicitud = ID_SOLICITUD_P;
+    
+    SELECT em.NOMBRE_EMPRESA, o.titulo INTO nombreEmpresa, oferTitulo
+    FROM empresa em 
+    INNER JOIN ofertas o on em.ID_EMPRESA = o.ID_EMPRESA
+    INNER JOIN solicitudes s on o.ID_OFERTA = s.ID_OFERTA
+    WHERE s.id_solicitud = ID_SOLICITUD_P;
+    
+    -- Insertar notificación si el estado de la solicitud es 3
+    IF ID_ESTADO_SOLICITUD_P = 3 THEN 
+        INSERT INTO notificaciones_solicitantes (
+            TITULO, 
+            DESCRIPCION, 
+            FECHA, 
+            ID_SOLICITANTE, 
+            ESTADO_VISUALIZACION, 
+            ID_SOLICITUD
+        ) 
+        VALUES (
+            'SOLICITUD ACEPTADA',
+            CONCAT('Nos complace informarle que la empresa ',nombreEmpresa,' ha decidido aceptar su solicitud a la oferta de empleo: ', oferTitulo, '. La empresa ',nombreEmpresa,' se pondra en contacto con usted. Feliz dia'),
+            CURDATE(),
+            idPersona,
+            0,
+            ID_SOLICITUD_P
+        );
+    END IF;
+    -- si fue rechazada
+	IF ID_ESTADO_SOLICITUD_P = 4 THEN 
+        INSERT INTO notificaciones_solicitantes (
+            TITULO, 
+            DESCRIPCION, 
+            FECHA, 
+            ID_SOLICITANTE, 
+            ESTADO_VISUALIZACION, 
+            ID_SOLICITUD
+        ) 
+        VALUES (
+            'SOLICITUD RECHAZADA',
+            CONCAT('Le informamos que la empresa ',nombreEmpresa,' ha decidido rechazar su solicitud a la oferta de empleo: ', oferTitulo, ', pero aun puede seguir aplicando a ofertas. No te rindas!'),
+            CURDATE(),
+            idPersona,
+            0,
+            ID_SOLICITUD_P
+        );
+    END IF;
+
+END$$
+DELIMITER ;
