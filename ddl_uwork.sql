@@ -21,7 +21,7 @@ USE `mydb1` ;
 -- Table `mydb1`.`generos`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb1`.`generos` (
-  `ID_GENERO` INT NOT NULL,
+  `ID_GENERO` INT NOT NULL AUTO_INCREMENT,
   `GENERO` VARCHAR(45) NULL,
   PRIMARY KEY (`ID_GENERO`))
 ENGINE = InnoDB;
@@ -31,7 +31,7 @@ ENGINE = InnoDB;
 -- Table `mydb1`.`personas`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb1`.`personas` (
-  `ID_PERSONA` INT NOT NULL,
+  `ID_PERSONA` INT NOT NULL AUTO_INCREMENT,
   `PRIMER_NOMBRE` VARCHAR(45) NULL,
   `SEGUNDO_NOMBRE` VARCHAR(45) NULL,
   `PRIMER_APELLIDO` VARCHAR(45) NULL,
@@ -53,7 +53,7 @@ ENGINE = InnoDB;
 -- Table `mydb1`.`parentescos`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb1`.`parentescos` (
-  `ID_PARENTESCOS` INT NOT NULL,
+  `ID_PARENTESCOS` INT NOT NULL AUTO_INCREMENT,
   `PARENTESCO` VARCHAR(45) NULL,
   PRIMARY KEY (`ID_PARENTESCOS`))
 ENGINE = InnoDB;
@@ -63,7 +63,7 @@ ENGINE = InnoDB;
 -- Table `mydb1`.`estado_civil`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb1`.`estado_civil` (
-  `ID_ESTADO_CIVIL` INT NOT NULL,
+  `ID_ESTADO_CIVIL` INT NOT NULL AUTO_INCREMENT,
   `ESTADO_CIVIL` VARCHAR(45) NULL,
   PRIMARY KEY (`ID_ESTADO_CIVIL`))
 ENGINE = InnoDB;
@@ -73,7 +73,7 @@ ENGINE = InnoDB;
 -- Table `mydb1`.`tipo_lugar`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb1`.`tipo_lugar` (
-  `ID_TIPO_LUGAR` INT NOT NULL,
+  `ID_TIPO_LUGAR` INT NOT NULL AUTO_INCREMENT,
   `TIPO_LUGAR` VARCHAR(100) NULL,
   PRIMARY KEY (`ID_TIPO_LUGAR`))
 ENGINE = InnoDB;
@@ -83,7 +83,7 @@ ENGINE = InnoDB;
 -- Table `mydb1`.`lugares`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb1`.`lugares` (
-  `ID_LUGAR` INT NOT NULL,
+  `ID_LUGAR` INT NOT NULL AUTO_INCREMENT,
   `NOMBRE_LUGAR` VARCHAR(45) NULL,
   `ID_TIPO_LUGAR` INT NOT NULL,
   `ID_LUGAR_PADRE` INT NOT NULL,
@@ -180,7 +180,7 @@ ENGINE = InnoDB;
 -- Table `mydb1`.`condiciones_medicas`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb1`.`condiciones_medicas` (
-  `ID_CONDICIONE_MEDICA` INT NOT NULL,
+  `ID_CONDICIONE_MEDICA` INT NOT NULL AUTO_INCREMENT,
   `CONDICION_MEDICAS` VARCHAR(45) NULL,
   PRIMARY KEY (`ID_CONDICIONE_MEDICA`))
 ENGINE = InnoDB;
@@ -215,7 +215,7 @@ ENGINE = InnoDB;
 -- Table `mydb1`.`tipo_seguros`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb1`.`tipo_seguros` (
-  `ID_TIPO_SEGURO` INT NOT NULL,
+  `ID_TIPO_SEGURO` INT NOT NULL AUTO_INCREMENT,
   `TIPO_SEGURO` VARCHAR(45) NULL,
   PRIMARY KEY (`ID_TIPO_SEGURO`))
 ENGINE = InnoDB;
@@ -249,7 +249,7 @@ ENGINE = InnoDB;
 -- Table `mydb1`.`nivel_academico`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb1`.`nivel_academico` (
-  `ID_NIVEL_ACADEMICO` INT NOT NULL,
+  `ID_NIVEL_ACADEMICO` INT NOT NULL AUTO_INCREMENT,
   `NIVEL_ACADEMICO` VARCHAR(45) NULL,
   PRIMARY KEY (`ID_NIVEL_ACADEMICO`))
 ENGINE = InnoDB;
@@ -259,7 +259,7 @@ ENGINE = InnoDB;
 -- Table `mydb1`.`formacion_profesional`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb1`.`formacion_profesional` (
-  `ID_FORMACION_PROFESIONAL` INT NOT NULL,
+  `ID_FORMACION_PROFESIONAL` INT NOT NULL AUTO_INCREMENT,
   `FORMACION_PROFESIONAL` VARCHAR(100) NULL,
   PRIMARY KEY (`ID_FORMACION_PROFESIONAL`))
 ENGINE = InnoDB;
@@ -300,7 +300,7 @@ ENGINE = InnoDB;
 -- Table `mydb1`.`puestos`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb1`.`puestos` (
-  `ID_PUESTO` INT NOT NULL,
+  `ID_PUESTO` INT NOT NULL AUTO_INCREMENT,
   `PUESTO` VARCHAR(45) NULL,
   PRIMARY KEY (`ID_PUESTO`))
 ENGINE = InnoDB;
@@ -310,7 +310,7 @@ ENGINE = InnoDB;
 -- Table `mydb1`.`experienCIA_LABORAL`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb1`.`experiencia_laboral` (
-  `idEXPERIENCIA_LABORAL` INT NOT NULL,
+  `idEXPERIENCIA_LABORAL` INT NOT NULL AUTO_INCREMENT,
   `ID_PERSONA` INT NOT NULL,
   `ID_PUESTO` INT NOT NULL,
   `EMPRESA` VARCHAR(45) NULL,
@@ -337,7 +337,7 @@ ENGINE = InnoDB;
 -- Table `mydb1`.`modalidad`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb1`.`modalidad` (
-  `ID_MODALIDAD` INT NOT NULL,
+  `ID_MODALIDAD` INT NOT NULL AUTO_INCREMENT,
   `MODALIDAD` VARCHAR(45) NULL,
   PRIMARY KEY (`ID_MODALIDAD`))
 ENGINE = InnoDB;
@@ -392,7 +392,7 @@ ENGINE = InnoDB;
 -- Table `mydb1`.`contratos`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb1`.`contratos` (
-  `ID_CONTRATO` INT NOT NULL,
+  `ID_CONTRATO` INT NOT NULL AUTO_INCREMENT,
   `CONTRATO` VARCHAR(45) NULL,
   PRIMARY KEY (`ID_CONTRATO`))
 ENGINE = InnoDB;
@@ -425,7 +425,7 @@ ENGINE = InnoDB;
 -- Table `mydb1`.`industrias`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb1`.`industrias` (
-  `ID_INDUSTRIA` INT NOT NULL,
+  `ID_INDUSTRIA` INT NOT NULL AUTO_INCREMENT,
   `INDUSTRIA` VARCHAR(45) NULL,
   PRIMARY KEY (`ID_INDUSTRIA`))
 ENGINE = InnoDB;
@@ -435,7 +435,7 @@ ENGINE = InnoDB;
 -- Table `mydb1`.`empresa`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb1`.`empresa` (
-  `ID_EMPRESA` INT NOT NULL,
+  `ID_EMPRESA` INT NOT NULL AUTO_INCREMENT,
   `NOMBRE_EMPRESA` VARCHAR(100) NULL,
   `CORREO` VARCHAR(45) NULL,
   `CONTRASENA` VARCHAR(45) NULL,
@@ -472,7 +472,7 @@ ENGINE = InnoDB;
 -- Table `mydb1`.`tipo_empleo`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb1`.`tipo_empleo` (
-  `ID_TIPO_EMPLEO` INT NOT NULL,
+  `ID_TIPO_EMPLEO` INT NOT NULL AUTO_INCREMENT,
   `TIPO_EMPLEO` VARCHAR(45) NULL,
   PRIMARY KEY (`ID_TIPO_EMPLEO`))
 ENGINE = InnoDB;
@@ -482,7 +482,7 @@ ENGINE = InnoDB;
 -- Table `mydb1`.`ofertas`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb1`.`ofertas` (
-  `ID_OFERTA` INT NOT NULL,
+  `ID_OFERTA` INT NOT NULL AUTO_INCREMENT,
   `ID_EMPRESA` INT NOT NULL,
   `ID_TIPO_EMPLEO` INT NOT NULL,
   `ID_NIVEL_ACADEMICO` INT NOT NULL,
@@ -505,32 +505,32 @@ CREATE TABLE IF NOT EXISTS `mydb1`.`ofertas` (
   CONSTRAINT `fk_OFERTAS_EMPRESA1`
     FOREIGN KEY (`ID_EMPRESA`)
     REFERENCES `mydb1`.`empresa` (`ID_EMPRESA`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_OFERTAS_TIPO_EMPLEO1`
     FOREIGN KEY (`ID_TIPO_EMPLEO`)
     REFERENCES `mydb1`.`tipo_empleo` (`ID_TIPO_EMPLEO`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_OFERTAS_NIVEL_ACADEMICO1`
     FOREIGN KEY (`ID_NIVEL_ACADEMICO`)
     REFERENCES `mydb1`.`nivel_academico` (`ID_NIVEL_ACADEMICO`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_OFERTAS_LUGARES1`
     FOREIGN KEY (`ID_LUGAR`)
     REFERENCES `mydb1`.`lugares` (`ID_LUGAR`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_OFERTAS_MODALIDAD1`
     FOREIGN KEY (`ID_MODALIDAD`)
     REFERENCES `mydb1`.`modalidad` (`ID_MODALIDAD`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_OFERTAS_CONTRATOS1`
     FOREIGN KEY (`ID_CONTRATO`)
     REFERENCES `mydb1`.`contratos` (`ID_CONTRATO`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
@@ -539,7 +539,7 @@ ENGINE = InnoDB;
 -- Table `mydb1`.`ofertas_puestos`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb1`.`ofertas_puestos` (
-  `idOFERTAS_PUESTOS` INT NOT NULL,
+  `idOFERTAS_PUESTOS` INT NOT NULL AUTO_INCREMENT,
   `DESCRIPCION_PUESTO` VARCHAR(300) NULL,
   `ID_PUESTO` INT NOT NULL,
   `ID_OFERTA` INT NOT NULL,
@@ -549,12 +549,12 @@ CREATE TABLE IF NOT EXISTS `mydb1`.`ofertas_puestos` (
   CONSTRAINT `fk_OFERTAS_PUESTOS_PUESTOS1`
     FOREIGN KEY (`ID_PUESTO`)
     REFERENCES `mydb1`.`puestos` (`ID_PUESTO`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_OFERTAS_PUESTOS_OFERTAS1`
     FOREIGN KEY (`ID_OFERTA`)
     REFERENCES `mydb1`.`ofertas` (`ID_OFERTA`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
@@ -570,12 +570,12 @@ CREATE TABLE IF NOT EXISTS `mydb1`.`requisitos_academicos` (
   CONSTRAINT `fk_REQUISITOS_ACADEMICOS_OFERTAS1`
     FOREIGN KEY (`ID_OFERTA`)
     REFERENCES `mydb1`.`ofertas` (`ID_OFERTA`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_REQUISITOS_ACADEMICOS_FORMACION_PROFESIONAL1`
     FOREIGN KEY (`ID_FORMACION_PROFESIONAL`)
     REFERENCES `mydb1`.`formacion_profesional` (`ID_FORMACION_PROFESIONAL`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
@@ -584,7 +584,7 @@ ENGINE = InnoDB;
 -- Table `mydb1`.`requisitos_laborales`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb1`.`requisitos_laborales` (
-  `ID_REQUISITOS_LABORALES` INT NOT NULL,
+  `ID_REQUISITOS_LABORALES` INT NOT NULL AUTO_INCREMENT,
   `ID_PUESTO` INT NOT NULL,
   `ID_OFERTA` INT NOT NULL,
   PRIMARY KEY (`ID_REQUISITOS_LABORALES`),
@@ -594,12 +594,12 @@ CREATE TABLE IF NOT EXISTS `mydb1`.`requisitos_laborales` (
   CONSTRAINT `fk_REQUISITOS_LABORALES_PUESTOS1`
     FOREIGN KEY (`ID_PUESTO`)
     REFERENCES `mydb1`.`puestos` (`ID_PUESTO`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_REQUISITOS_LABORALES_OFERTAS1`
     FOREIGN KEY (`ID_OFERTA`)
     REFERENCES `mydb1`.`ofertas` (`ID_OFERTA`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
@@ -617,42 +617,41 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `mydb1`.`solicitudes`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `solicitudes` (
-  `ID_SOLICITUD` INT NOT NULL AUTO_INCREMENT, 
+CREATE TABLE IF NOT EXISTS `mydb1`.`solicitudes` (
+  `ID_SOLICITUD` INT NOT NULL AUTO_INCREMENT,
   `ID_OFERTA` INT NOT NULL,
   `ID_SOLICITANTE` INT NOT NULL,
   `ID_ESTADO_SOLICITUD` INT NOT NULL,
   `EMISOR_SOLICITUD` TINYINT NOT NULL,
   `DESCRIPCION` VARCHAR(300) NULL,
-  `FECHA_SOLICITUD` DATETIME NULL, 
+  `FECHA_SOLICITUD` VARCHAR(45) NULL,
   PRIMARY KEY (`ID_SOLICITUD`),
-  INDEX `fk_SOLICITUDES_OFERTAS1_idx` (`ID_OFERTA` ASC),
-  INDEX `fk_SOLICITUDES_ESTADO_SOLICITUD1_idx` (`ID_ESTADO_SOLICITUD` ASC),
-  INDEX `fk_SOLICITUDES_SOLICITANTES1_idx` (`ID_SOLICITANTE` ASC),
+  INDEX `fk_SOLICITUDES_OFERTAS1_idx` (`ID_OFERTA` ASC) ,
+  INDEX `fk_SOLICITUDES_ESTADO_SOLICITUD1_idx` (`ID_ESTADO_SOLICITUD` ASC) ,
+  INDEX `fk_SOLICITUDES_SOLICITANTES1_idx` (`ID_SOLICITANTE` ASC) ,
   CONSTRAINT `fk_SOLICITUDES_OFERTAS1`
     FOREIGN KEY (`ID_OFERTA`)
-    REFERENCES `ofertas` (`ID_OFERTA`)
-    ON DELETE NO ACTION
+    REFERENCES `mydb1`.`ofertas` (`ID_OFERTA`)
+    ON DELETE CASCADE
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_SOLICITUDES_ESTADO_SOLICITUD1`
     FOREIGN KEY (`ID_ESTADO_SOLICITUD`)
-    REFERENCES `estado_solicitud` (`ID_ESTADO_SOLICITUD`)
-    ON DELETE NO ACTION
+    REFERENCES `mydb1`.`estado_solicitud` (`ID_ESTADO_SOLICITUD`)
+    ON DELETE CASCADE
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_SOLICITUDES_SOLICITANTES1`
     FOREIGN KEY (`ID_SOLICITANTE`)
-    REFERENCES `solicitantes` (`ID_PERSONA`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION
-) ENGINE = InnoDB;
-
+    REFERENCES `mydb1`.`solicitantes` (`ID_PERSONA`)
+    ON DELETE CASCADE
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
 -- Table `mydb1`.`idiomas`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb1`.`idiomas` (
-  `ID_IDIOMA` INT NOT NULL,
+  `ID_IDIOMA` INT NOT NULL AUTO_INCREMENT,
   `IDIOMA` VARCHAR(45) NULL,
   PRIMARY KEY (`ID_IDIOMA`))
 ENGINE = InnoDB;
@@ -712,17 +711,17 @@ CREATE TABLE IF NOT EXISTS `mydb1`.`ofertas_idiomas` (
   CONSTRAINT `fk_OFERTAS_IDIOMAS_NIVEL_IDIOMA1`
     FOREIGN KEY (`ID_NIVEL_IDIOMA`)
     REFERENCES `mydb1`.`nivel_idioma` (`ID_NIVEL_IDIOMA`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_OFERTAS_IDIOMAS_OFERTAS1`
     FOREIGN KEY (`ID_OFERTA`)
     REFERENCES `mydb1`.`ofertas` (`ID_OFERTA`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_OFERTAS_IDIOMAS_IDIOMAS1`
     FOREIGN KEY (`ID_IDIOMA`)
     REFERENCES `mydb1`.`idiomas` (`ID_IDIOMA`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE NO ACTION
 ) ENGINE = InnoDB;
 
@@ -732,7 +731,7 @@ CREATE TABLE IF NOT EXISTS `mydb1`.`ofertas_idiomas` (
 -- Table `mydb1`.`notificaciones_solicitantes`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb1`.`notificaciones_solicitantes` (
-  `ID_NOTIFICACION_SOL` INT NOT NULL,
+  `ID_NOTIFICACION_SOL` INT NOT NULL AUTO_INCREMENT,
   `TITULO` VARCHAR(45) NULL,
   `DESCRIPCION` VARCHAR(200) NULL,
   `FECHA` DATE NULL,
@@ -745,12 +744,12 @@ CREATE TABLE IF NOT EXISTS `mydb1`.`notificaciones_solicitantes` (
   CONSTRAINT `fk_NOTIFICACIONES_SOLICITANTES_SOLICITANTES1`
     FOREIGN KEY (`ID_SOLICITANTE`)
     REFERENCES `mydb1`.`solicitantes` (`ID_PERSONA`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_NOTIFICACIONES_SOLICITANTES_SOLICITUDES1`
     FOREIGN KEY (`ID_SOLICITUD`)
     REFERENCES `mydb1`.`solicitudes` (`ID_SOLICITUD`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
@@ -759,7 +758,7 @@ ENGINE = InnoDB;
 -- Table `mydb1`.`notificaciones_empresas`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb1`.`notificaciones_empresas` (
-  `ID_NOTIFICACION_EMP` INT NOT NULL,
+  `ID_NOTIFICACION_EMP` INT NOT NULL AUTO_INCREMENT,
   `TITULO` VARCHAR(45) NULL,
   `DESCRIPCION` VARCHAR(200) NULL,
   `FECHA` DATE NULL,
@@ -772,12 +771,12 @@ CREATE TABLE IF NOT EXISTS `mydb1`.`notificaciones_empresas` (
   CONSTRAINT `fk_NOTIFICACIONES_SOLICITANTES_copy1_EMPRESA1`
     FOREIGN KEY (`ID_EMPRESA`)
     REFERENCES `mydb1`.`empresa` (`ID_EMPRESA`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_NOTIFICACIONES_EMPRESAS_SOLICITUDES1`
     FOREIGN KEY (`ID_SOLICITUD`)
     REFERENCES `mydb1`.`solicitudes` (`ID_SOLICITUD`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
@@ -786,7 +785,7 @@ ENGINE = InnoDB;
 -- Table `mydb1`.`administradores`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb1`.`administradores` (
-  `ID_PERSONA` INT NOT NULL,
+  `ID_PERSONA` INT NOT NULL AUTO_INCREMENT,
   `CORREO` VARCHAR(45) NULL,
   `CONTRASENA` VARCHAR(45) NULL,
   PRIMARY KEY (`ID_PERSONA`),
