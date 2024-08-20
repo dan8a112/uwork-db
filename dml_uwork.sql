@@ -405,26 +405,26 @@ INSERT INTO `mydb1`.`LUGARES` (`ID_LUGAR`, `NOMBRE_LUGAR`, `ID_TIPO_LUGAR`, `ID_
 (317, 'Yamaranguila', 3, 19);
 
 INSERT INTO `SOLICITANTES` (`ID_PERSONA`, `CORREO`, `CONTRASENA`, `FECHA_NACIMIENTO`, `TITULAR`, `DESCRIPCION`, `ID_ESTADO_CIVIL`, `ID_LUGAR_NACIMIENTO`, `ID_LUGAR_RESIDENCIA`, `URL_FOTO_PERFIL`) VALUES
-(1, 'carlos.gomez@example.com', 'password123', '1990-01-01', 'Ingeniero en telecomunicaciones.', 'Ingeniero con experiencia en redes y sistemas de comunicación.', 1, 20, 21, 'https://proyectoanalisis.s3.amazonaws.com/Solicitantes/ProfilePhoto2.jpg'),
-(2, 'maria.rodriguez@example.com', 'securepass', '1988-02-05', 'Abogada con enfoque en derecho civil.', 'Especialista en derecho civil con 5 años de experiencia.', 2, 22, 23, 'https://proyectoanalisis.s3.amazonaws.com/Solicitantes/ProfilePhoto1.jpg'),
-(3, 'juan.martinez@example.com', 'mypassword', '1992-03-02', 'Desarrollador web apasionado.', 'Desarrollador web con experiencia en frontend y backend.', 1, 24, 25, 'https://proyectoanalisis.s3.amazonaws.com/Solicitantes/ProfilePhoto2.jpg'),
-(4, 'ana.hernandez@example.com', 'pass1234', '1993-04-08', 'Diseñadora gráfica creativa.', 'Diseñadora con un enfoque en branding y marketing visual.', 2, 26, 27, 'https://proyectoanalisis.s3.amazonaws.com/Solicitantes/ProfilePhoto1.jpg'),
-(5, 'luis.ramirez@example.com', 'password5678', '1987-05-06', 'Médico general dedicado.', 'Médico con experiencia en atención primaria y medicina interna.', 3, 28, 29, 'https://proyectoanalisis.s3.amazonaws.com/Solicitantes/ProfilePhoto2.jpg'),
-(6, 'laura.vargas@example.com', 'secure1234', '1991-06-03', 'Farmacéutica interesada en investigación.', 'Especialista en el desarrollo de nuevos medicamentos.', 1, 30, 31, 'https://proyectoanalisis.s3.amazonaws.com/Solicitantes/ProfilePhoto1.jpg'),
-(7, 'ricardo.flores@example.com', 'ricardo789', '1985-07-09', 'Contador especializado en auditoría.', 'Experto en auditoría financiera y control interno.', 2, 32, 33, 'https://proyectoanalisis.s3.amazonaws.com/Solicitantes/ProfilePhoto2.jpg'),
-(8, 'gabriela.rojas@example.com', 'gabriela2024', '1994-08-04', 'Psicóloga enfocada en terapias familiares.', 'Psicóloga con especialización en terapia de pareja y familiar.', 3, 34, 35, 'https://proyectoanalisis.s3.amazonaws.com/Solicitantes/ProfilePhoto1.jpg'),
-(9, 'david.ortega@example.com', 'david5678', '1986-09-01', 'Ingeniero en sistemas.', 'Desarrollador con especialización en ciberseguridad.', 1, 36, 37, 'https://proyectoanalisis.s3.amazonaws.com/Solicitantes/ProfilePhoto2.jpg'),
-(10, 'claudia.moreno@example.com', 'claudia1234', '1995-10-05', 'Consultora en recursos humanos.', 'Especialista en desarrollo organizacional y talento humano.', 2, 38, 39, 'https://proyectoanalisis.s3.amazonaws.com/Solicitantes/ProfilePhoto1.jpg'),
-(11, 'jorge.paredes@example.com', 'jorge7890', '1983-11-08', 'Chef especializado en cocina mediterránea.', 'Chef con experiencia en restaurantes de alto nivel.', 3, 40, 41, 'https://proyectoanalisis.s3.amazonaws.com/Solicitantes/ProfilePhoto2.jpg'),
-(12, 'daniela.cortes@example.com', 'daniela2024', '1990-12-09', 'Ingeniera industrial con enfoque en producción.', 'Ingeniera con experiencia en optimización de procesos.', 1, 42, 43, 'https://proyectoanalisis.s3.amazonaws.com/Solicitantes/ProfilePhoto1.jpg'),
-(13, 'felipe.rios@example.com', 'felipepass', '1987-07-13', 'Especialista en marketing digital.', 'Consultor con experiencia en campañas de branding y social media.', 2, 44, 45, 'https://proyectoanalisis.s3.amazonaws.com/Solicitantes/ProfilePhoto2.jpg'),
-(14, 'sofia.morales@example.com', 'sofia5678', '1992-12-14', 'Artista plástica contemporánea.', 'Artista con exposiciones a nivel nacional e internacional.', 3, 46, 47, 'https://proyectoanalisis.s3.amazonaws.com/Solicitantes/ProfilePhoto1.jpg'),
-(15, 'emilio.lopez@example.com', 'emilio1234', '1986-03-15', 'Desarrollador de software.', 'Especializado en aplicaciones móviles y sistemas embebidos.', 1, 48, 49, 'https://proyectoanalisis.s3.amazonaws.com/Solicitantes/ProfilePhoto2.jpg'),
-(16, 'isabella.alvarez@example.com', 'isabella2024', '1991-06-16', 'Arquitecta enfocada en proyectos sostenibles.', 'Arquitecta con especialización en diseño sostenible y eco-friendly.', 2, 50, 51, 'https://proyectoanalisis.s3.amazonaws.com/Solicitantes/ProfilePhoto1.jpg'),
-(17, 'francisco.castro@example.com', 'francisco789', '1985-09-17', 'Ingeniero civil.', 'Experiencia en la gestión de proyectos de construcción de gran envergadura.', 3, 52, 53, 'https://proyectoanalisis.s3.amazonaws.com/Solicitantes/ProfilePhoto2.jpg'),
-(18, 'camila.garcia@example.com', 'camila2024', '1993-12-18', 'Abogada con especialización en derecho penal.', 'Defensora penal con 3 años de experiencia en el campo.', 1, 54, 55, 'https://proyectoanalisis.s3.amazonaws.com/Solicitantes/ProfilePhoto1.jpg'),
-(19, 'antonio.mendoza@example.com', 'antonio123', '1984-09-19', 'Especialista en telecomunicaciones.', 'Ingeniero en telecomunicaciones con enfoque en sistemas de redes.', 2, 56, 57, 'https://proyectoanalisis.s3.amazonaws.com/Solicitantes/ProfilePhoto2.jpg'),
-(20, 'valentina.gomez@example.com', 'valentina5678', '1990-10-04', 'Ingeniera en software.', 'Especialista en desarrollo de aplicaciones de alta complejidad.', 3, 58, 59, 'https://proyectoanalisis.s3.amazonaws.com/Solicitantes/ProfilePhoto1.jpg');
+(1, 'carlos.gomez@example.com', 'password123', '1990-01-01', 'Ingeniero en telecomunicaciones.', 'Ingeniero con experiencia en redes y sistemas de comunicación.', 1, 1, 21, 'https://proyectoanalisis.s3.amazonaws.com/Solicitantes/ProfilePhoto2.jpg'),
+(2, 'maria.rodriguez@example.com', 'securepass', '1988-02-05', 'Abogada con enfoque en derecho civil.', 'Especialista en derecho civil con 5 años de experiencia.', 2, 1, 23, 'https://proyectoanalisis.s3.amazonaws.com/Solicitantes/ProfilePhoto1.jpg'),
+(3, 'juan.martinez@example.com', 'mypassword', '1992-03-02', 'Desarrollador web apasionado.', 'Desarrollador web con experiencia en frontend y backend.', 1, 1, 25, 'https://proyectoanalisis.s3.amazonaws.com/Solicitantes/ProfilePhoto2.jpg'),
+(4, 'ana.hernandez@example.com', 'pass1234', '1993-04-08', 'Diseñadora gráfica creativa.', 'Diseñadora con un enfoque en branding y marketing visual.', 2, 1, 27, 'https://proyectoanalisis.s3.amazonaws.com/Solicitantes/ProfilePhoto1.jpg'),
+(5, 'luis.ramirez@example.com', 'password5678', '1987-05-06', 'Médico general dedicado.', 'Médico con experiencia en atención primaria y medicina interna.', 3, 1, 29, 'https://proyectoanalisis.s3.amazonaws.com/Solicitantes/ProfilePhoto2.jpg'),
+(6, 'laura.vargas@example.com', 'secure1234', '1991-06-03', 'Farmacéutica interesada en investigación.', 'Especialista en el desarrollo de nuevos medicamentos.', 1, 1, 31, 'https://proyectoanalisis.s3.amazonaws.com/Solicitantes/ProfilePhoto1.jpg'),
+(7, 'ricardo.flores@example.com', 'ricardo789', '1985-07-09', 'Contador especializado en auditoría.', 'Experto en auditoría financiera y control interno.', 2, 1, 33, 'https://proyectoanalisis.s3.amazonaws.com/Solicitantes/ProfilePhoto2.jpg'),
+(8, 'gabriela.rojas@example.com', 'gabriela2024', '1994-08-04', 'Psicóloga enfocada en terapias familiares.', 'Psicóloga con especialización en terapia de pareja y familiar.', 3, 1, 35, 'https://proyectoanalisis.s3.amazonaws.com/Solicitantes/ProfilePhoto1.jpg'),
+(9, 'david.ortega@example.com', 'david5678', '1986-09-01', 'Ingeniero en sistemas.', 'Desarrollador con especialización en ciberseguridad.', 1, 1, 37, 'https://proyectoanalisis.s3.amazonaws.com/Solicitantes/ProfilePhoto2.jpg'),
+(10, 'claudia.moreno@example.com', 'claudia1234', '1995-10-05', 'Consultora en recursos humanos.', 'Especialista en desarrollo organizacional y talento humano.', 2, 1, 39, 'https://proyectoanalisis.s3.amazonaws.com/Solicitantes/ProfilePhoto1.jpg'),
+(11, 'jorge.paredes@example.com', 'jorge7890', '1983-11-08', 'Chef especializado en cocina mediterránea.', 'Chef con experiencia en restaurantes de alto nivel.', 3, 1, 41, 'https://proyectoanalisis.s3.amazonaws.com/Solicitantes/ProfilePhoto2.jpg'),
+(12, 'daniela.cortes@example.com', 'daniela2024', '1990-12-09', 'Ingeniera industrial con enfoque en producción.', 'Ingeniera con experiencia en optimización de procesos.', 1, 1, 43, 'https://proyectoanalisis.s3.amazonaws.com/Solicitantes/ProfilePhoto1.jpg'),
+(13, 'felipe.rios@example.com', 'felipepass', '1987-07-13', 'Especialista en marketing digital.', 'Consultor con experiencia en campañas de branding y social media.', 2, 1, 45, 'https://proyectoanalisis.s3.amazonaws.com/Solicitantes/ProfilePhoto2.jpg'),
+(14, 'sofia.morales@example.com', 'sofia5678', '1992-12-14', 'Artista plástica contemporánea.', 'Artista con exposiciones a nivel nacional e internacional.', 3, 1, 47, 'https://proyectoanalisis.s3.amazonaws.com/Solicitantes/ProfilePhoto1.jpg'),
+(15, 'emilio.lopez@example.com', 'emilio1234', '1986-03-15', 'Desarrollador de software.', 'Especializado en aplicaciones móviles y sistemas embebidos.', 1, 1, 49, 'https://proyectoanalisis.s3.amazonaws.com/Solicitantes/ProfilePhoto2.jpg'),
+(16, 'isabella.alvarez@example.com', 'isabella2024', '1991-06-16', 'Arquitecta enfocada en proyectos sostenibles.', 'Arquitecta con especialización en diseño sostenible y eco-friendly.', 2, 1, 51, 'https://proyectoanalisis.s3.amazonaws.com/Solicitantes/ProfilePhoto1.jpg'),
+(17, 'francisco.castro@example.com', 'francisco789', '1985-09-17', 'Ingeniero civil.', 'Experiencia en la gestión de proyectos de construcción de gran envergadura.', 3, 1, 53, 'https://proyectoanalisis.s3.amazonaws.com/Solicitantes/ProfilePhoto2.jpg'),
+(18, 'camila.garcia@example.com', 'camila2024', '1993-12-18', 'Abogada con especialización en derecho penal.', 'Defensora penal con 3 años de experiencia en el campo.', 1, 1, 55, 'https://proyectoanalisis.s3.amazonaws.com/Solicitantes/ProfilePhoto1.jpg'),
+(19, 'antonio.mendoza@example.com', 'antonio123', '1984-09-19', 'Especialista en telecomunicaciones.', 'Ingeniero en telecomunicaciones con enfoque en sistemas de redes.', 2, 1, 57, 'https://proyectoanalisis.s3.amazonaws.com/Solicitantes/ProfilePhoto2.jpg'),
+(20, 'valentina.gomez@example.com', 'valentina5678', '1990-10-04', 'Ingeniera en software.', 'Especialista en desarrollo de aplicaciones de alta complejidad.', 3, 1, 59, 'https://proyectoanalisis.s3.amazonaws.com/Solicitantes/ProfilePhoto1.jpg');
 
 INSERT INTO `mydb1`.`FAMILIARES` (`ID_FAMILIAR`, `ID_PARENTESCOS`, `ID_SOLICITANTE`) 
 VALUES 
@@ -813,30 +813,33 @@ INSERT INTO `mydb1`.`TIPO_EMPLEO` (`ID_TIPO_EMPLEO`, `TIPO_EMPLEO`) VALUES
 (17, 'Medio Ambiente'),
 (18, 'Construccion'),
 (19, 'Transporte'),
-(20, 'Turismo');
+(20, 'Turismo'),
+(21, 'Farmac�utica'),
+(22, 'Arte'),
+(23, 'Alimentos y bebidas');
 
 
 INSERT INTO `mydb1`.`OFERTAS` 
 (`ID_OFERTA`, `ID_EMPRESA`, `ID_TIPO_EMPLEO`, `ID_NIVEL_ACADEMICO`, `ID_LUGAR`, `ID_MODALIDAD`, `ID_CONTRATO`, `TITULO`, `DESCRIPCION`, `FECHA_PUBLICACION`, `PLAZAS_DISPONIBLES`, `ESTADO_OFERTA`, `FECHA_EXPIRACION`) 
 VALUES
-(1, 1, 1, 5, 51, 1, 2, 'Arquitecto Sustentable', 'Buscamos un arquitecto con conocimientos en diseño y supervisión de obras sustentables.', '2024-08-01', 2, 1, '2024-09-01'),
-(2, 1, 5, 4, 53, 1, 3, 'Ingeniero Civil', 'Ingeniero con experiencia en gestión de proyectos.', '2024-08-05', 1, 1, '2024-10-05'),
+(1, 1, 17, 5, 51, 1, 2, 'Arquitecto Sustentable', 'Buscamos un arquitecto con conocimientos en diseño y supervisión de obras sustentables.', '2024-08-01', 2, 1, '2024-09-01'),
+(2, 1, 7, 4, 53, 1, 3, 'Ingeniero Civil', 'Ingeniero con experiencia en gestión de proyectos.', '2024-08-05', 1, 1, '2024-10-05'),
 (3, 2, 1, 5, 21, 7, 2, 'Ingeniero especialista en telecomunicaciones', 'Necesitamos un ingeniero con especialización en telecomunicaciones.', '2024-07-15', 3, 1, '2024-08-15'),
 (4, 2, 1, 5, 37, 2, 3, 'Ingeniero en Sistemas', 'Se busca un ingeniero especializado en ciberseguridad.', '2024-07-20', 1, 1, '2024-09-20'),
-(5, 3, 1, 5, 31, 1, 2, 'Farmacéutico', 'Experto en la investigación y desarrollo de nuevos medicamentos.', '2024-08-10', 4, 1, '2024-09-10'),
-(6, 4, 8, 5, 33, 7, 2, 'Auditor Financiero', 'Se busca un analista con experiencia en banca y servicios financieros.', '2024-08-01', 1, 1, '2024-09-01'),
-(7, 4, 5, 5, 59, 6, 3, 'Ingeniero de Software', 'Ingeniero con experiencia desarrollando aplicaciones.', '2024-08-05', 1, 1, '2024-10-05'),
-(8, 5, 1, 5, 43, 7, 2, 'Ingeniero Industrial', 'Especialista en gestión de procesos.', '2024-07-15', 2, 1, '2024-08-15'),
-(9, 5, 5, 4, 25, 6, 3, 'Desarrollador Web', 'Se busca desarrollador web fullstack.', '2024-07-20', 1, 1, '2024-09-20'),
-(10, 6, 1, 7, 41, 1, 2, 'Chef', 'Especialista en comida internacional.', '2024-08-10', 2, 1, '2024-09-10'),
-(11, 6, 1, 5, 45, 1, 2, 'Licenciado en Marketing', 'Se busca licenciado en marketing especializado en branding.', '2024-08-10', 1, 1, '2024-09-10'),
-(12, 7, 1, 4, 27, 6, 2, 'Diseñador Gráfico', 'Con especialización en branding.', '2024-08-10', 1, 1, '2024-09-10'),
-(13, 7, 1, 5, 39, 1, 2, 'Gerente de recursos humanos', 'Especialista en desarrollo de talento humano.', '2024-08-10', 4, 1, '2024-09-10'),
-(14, 8, 5, 4, 47, 3, 3, 'Artista', 'Se busca artista plástico.', '2024-08-10', 3, 1, '2024-09-10'),
-(15, 9, 1, 5, 23, 1, 2, 'Abogado', 'Buscamos abogados especializados en derecho civil.', '2024-08-10', 4, 1, '2024-09-10'),
-(16, 9, 1, 5, 55, 1, 2, 'Abogado', 'Buscamos abogados especializados en derecho penal.', '2024-08-10', 4, 1, '2024-09-10'),
-(17, 10, 1, 5, 29, 1, 2, 'Medico general', 'Se busca médico general.', '2024-08-10', 1, 1, '2024-09-10'),
-(18, 10, 1, 5, 35, 1, 2, 'Psicólogo', 'Buscamos psicólogos especializados en terapia de familia y pareja.', '2024-08-10', 2, 1, '2024-09-10');
+(5, 3, 21, 5, 31, 1, 2, 'Farmacéutico', 'Experto en la investigación y desarrollo de nuevos medicamentos.', '2024-08-10', 4, 1, '2024-09-10'),
+(6, 4, 5, 5, 33, 7, 2, 'Auditor Financiero', 'Se busca un analista con experiencia en banca y servicios financieros.', '2024-08-01', 1, 1, '2024-09-01'),
+(7, 4, 1, 5, 59, 6, 3, 'Ingeniero de Software', 'Ingeniero con experiencia desarrollando aplicaciones.', '2024-08-05', 1, 1, '2024-10-05'),
+(8, 5, 7, 5, 43, 7, 2, 'Ingeniero Industrial', 'Especialista en gestión de procesos.', '2024-07-15', 2, 1, '2024-08-15'),
+(9, 5, 1, 4, 25, 6, 3, 'Desarrollador Web', 'Se busca desarrollador web fullstack.', '2024-07-20', 1, 1, '2024-09-20'),
+(10, 6, 23, 7, 41, 1, 2, 'Chef', 'Especialista en comida internacional.', '2024-08-10', 2, 1, '2024-09-10'),
+(11, 6, 6, 5, 45, 1, 2, 'Licenciado en Marketing', 'Se busca licenciado en marketing especializado en branding.', '2024-08-10', 1, 1, '2024-09-10'),
+(12, 7, 12, 4, 27, 6, 2, 'Diseñador Gráfico', 'Con especialización en branding.', '2024-08-10', 1, 1, '2024-09-10'),
+(13, 7, 8, 5, 39, 1, 2, 'Gerente de recursos humanos', 'Especialista en desarrollo de talento humano.', '2024-08-10', 4, 1, '2024-09-10'),
+(14, 8, 22, 4, 47, 3, 3, 'Artista', 'Se busca artista plástico.', '2024-08-10', 3, 1, '2024-09-10'),
+(15, 9, 13, 5, 23, 1, 2, 'Abogado', 'Buscamos abogados especializados en derecho civil.', '2024-08-10', 4, 1, '2024-09-10'),
+(16, 9, 13, 5, 55, 1, 2, 'Abogado', 'Buscamos abogados especializados en derecho penal.', '2024-08-10', 4, 1, '2024-09-10'),
+(17, 10, 2, 5, 29, 1, 2, 'Medico general', 'Se busca médico general.', '2024-08-10', 1, 1, '2024-09-10'),
+(18, 10, 2, 5, 35, 1, 2, 'Psicólogo', 'Buscamos psicólogos especializados en terapia de familia y pareja.', '2024-08-10', 2, 1, '2024-09-10');
 
 INSERT INTO `mydb1`.`OFERTAS_PUESTOS` (`idOFERTAS_PUESTOS`, `DESCRIPCION_PUESTO`, `ID_PUESTO`, `ID_OFERTA`) VALUES
 (1, 'Responsable de diseñar y supervisar proyectos arquitectónicos con enfoque sustentable.', 27, 1),
