@@ -239,7 +239,7 @@ DELIMITER ;
 
 
 DELIMITER $$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `APLICAR_OFERTA`(
+CREATE DEFINER=`admin`@`%` PROCEDURE `APLICAR_OFERTA`(
 IN p_idOferta int,
 IN p_idSolicitante int,
 IN p_idEstadoSolicitud int,
@@ -253,22 +253,32 @@ BEGIN
 	DECLARE V_NOMBRE_OFERTA varchar(45);
 	DECLARE V_DESCRIPCION_EMPRESA varchar(200);
 	DECLARE V_DESCRIPCION_SOLICITANTE varchar(200);
+    DECLARE v_sqlstate CHAR(5);
+    DECLARE v_errno INT;
+    DECLARE v_message TEXT;
 
     DECLARE EXIT HANDLER FOR SQLEXCEPTION
     BEGIN
+		-- Capturar el error
+        GET DIAGNOSTICS CONDITION 1
+		v_sqlstate = RETURNED_SQLSTATE,
+		v_errno = MYSQL_ERRNO,
+		v_message = MESSAGE_TEXT;
+        
         ROLLBACK;
         SELECT 'Error al aplicar la oferta' AS mensaje;
+		SELECT 'Ocurrió un error.', v_sqlstate AS SQLSTAT, v_errno AS ErrorNumber, v_message AS ErrorMessage;
     END;
 	
 	START TRANSACTION;
 	
-	INSERT INTO SOLICITUDES (`ID_OFERTA`, `ID_SOLICITANTE`, `ID_ESTADO_SOLICITUD`, `EMISOR_SOLICITUD`, `DESCRIPCION`, `FECHA_SOLICITUD`) VALUES
+	INSERT INTO solicitudes (`ID_OFERTA`, `ID_SOLICITANTE`, `ID_ESTADO_SOLICITUD`, `EMISOR_SOLICITUD`, `DESCRIPCION`, `FECHA_SOLICITUD`) VALUES
 	(p_idOferta, p_idSolicitante, p_idEstadoSolicitud, p_emisorSolicitud, p_descripcion, sysdate());
 	
 	SELECT B.ID_EMPRESA
 	INTO V_ID_EMPRESA
-	FROM OFERTAS A
-	INNER JOIN EMPRESA B
+	FROM ofertas A
+	INNER JOIN empresa B
 	ON(A.ID_EMPRESA = B.ID_EMPRESA)
 	WHERE A.ID_OFERTA=p_idOferta;
 	
@@ -306,7 +316,7 @@ BEGIN
 	END IF;
 	
 	
-	INSERT INTO NOTIFICACIONES_EMPRESAS
+	INSERT INTO notificaciones_empresas
 	(`TITULO`,
 	`DESCRIPCION`,
 	`FECHA`,
@@ -316,7 +326,7 @@ BEGIN
 	VALUES
 	('Nueva aplicacion a una de tus ofertas',v_descripcion_empresa, sysdate(), 0, v_id_empresa, v_id_solicitud);
 	
-	INSERT INTO NOTIFICACIONES_SOLICITANTES
+	INSERT INTO notificaciones_solicitantes
 	(`TITULO`,
 	`DESCRIPCION`,
 	`FECHA`,
@@ -328,66 +338,5 @@ BEGIN
 	
 	COMMIT;
 	SELECT 'Aplicacion creada correctamente' AS mensaje;
-END$$
-DELIMITER ;
-
-DELIMITER $$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `enviarNotificacionSolicitante`(
-    IN ID_ESTADO_SOLICITUD_P INT,
-    IN ID_SOLICITUD_P INT
-)
-BEGIN 
-	DECLARE oferTitulo VARCHAR(255);
-	DECLARE idPersona INT;
-    DECLARE nombreEmpresa VARCHAR(255);
-    
-    SELECT id_solicitante into idPersona 
-    FROM solicitudes WHERE id_solicitud = ID_SOLICITUD_P;
-    
-    SELECT em.NOMBRE_EMPRESA, o.titulo INTO nombreEmpresa, oferTitulo
-    FROM empresa em 
-    INNER JOIN ofertas o on em.ID_EMPRESA = o.ID_EMPRESA
-    INNER JOIN solicitudes s on o.ID_OFERTA = s.ID_OFERTA
-    WHERE s.id_solicitud = ID_SOLICITUD_P;
-    
-    -- Insertar notificación si el estado de la solicitud es 3
-    IF ID_ESTADO_SOLICITUD_P = 3 THEN 
-        INSERT INTO notificaciones_solicitantes (
-            TITULO, 
-            DESCRIPCION, 
-            FECHA, 
-            ID_SOLICITANTE, 
-            ESTADO_VISUALIZACION, 
-            ID_SOLICITUD
-        ) 
-        VALUES (
-            'SOLICITUD ACEPTADA',
-            CONCAT('Nos complace informarle que la empresa ',nombreEmpresa,' ha decidido aceptar su solicitud a la oferta de empleo: ', oferTitulo, '. La empresa ',nombreEmpresa,' se pondra en contacto con usted. Feliz dia'),
-            CURDATE(),
-            idPersona,
-            0,
-            ID_SOLICITUD_P
-        );
-    END IF;
-    -- si fue rechazada
-	IF ID_ESTADO_SOLICITUD_P = 4 THEN 
-        INSERT INTO notificaciones_solicitantes (
-            TITULO, 
-            DESCRIPCION, 
-            FECHA, 
-            ID_SOLICITANTE, 
-            ESTADO_VISUALIZACION, 
-            ID_SOLICITUD
-        ) 
-        VALUES (
-            'SOLICITUD RECHAZADA',
-            CONCAT('Le informamos que la empresa ',nombreEmpresa,' ha decidido rechazar su solicitud a la oferta de empleo: ', oferTitulo, ', pero aun puede seguir aplicando a ofertas. No te rindas!'),
-            CURDATE(),
-            idPersona,
-            0,
-            ID_SOLICITUD_P
-        );
-    END IF;
-
 END$$
 DELIMITER ;
